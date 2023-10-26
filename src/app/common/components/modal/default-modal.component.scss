@@ -1,0 +1,111 @@
+::ng-deep {
+    .am-default-modal {
+        background: rgba(#000, 0.3);
+        backdrop-filter: blur(4px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: -999em;
+        top: 0;
+        z-index: 20;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s 0s, transform 0.4s 0s, left 0s 0.4s;
+
+        &.am-active {
+            left: 0;
+            pointer-events: auto;
+            opacity: 1;
+            transition: opacity 0.4s 0s, transform 0.4s 0s, left 0s;
+
+            .am-modal-content {
+                transform: translateY(0);
+            }
+        }
+
+        .am-modal-content {
+            background: #FFFite;
+            width: 670px;
+            padding: 65px 0;
+            box-shadow: 0px 8px 16px rgba(#000, 0.12);
+            border-radius: 12px;
+            transform: translateY(-100px);
+            transition: all 0.4s;
+            position: relative;
+            z-index: 2;
+
+            h4 {
+                color: #000;
+                font-family: 'arial';
+                font-style: normal;
+                font-weight: 700;
+                font-size: $titleMd;
+                text-align: center;
+                margin: 30px 0 0;
+            }
+
+            p {
+                color: #000;
+                font-family: 'arial';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                text-align: center;
+                margin: 20px 0 0;
+            }
+
+            .am-close {
+                font-size: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 32px;
+                top: 32px;
+                border: solid 2px $greyTones-color-90;
+                border-radius: 50%;
+                transition: all 0.4s;
+                backface-visibility: hidden;
+
+                &:before,
+                &:after {
+                    content: '';
+                    background: $greyTones-color-90;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 9.5px;
+                    height: 2px;
+                    border-radius: 0.5px;
+                }
+
+                &:before {
+                    transform: rotate(-45deg);
+                }
+
+                &:after {
+                    transform: rotate(45deg);
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .am-overlay {
+            font-size: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

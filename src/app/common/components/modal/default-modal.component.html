@@ -1,0 +1,10 @@
+<div #amElement class="am-default-modal"
+    [ngClass]="{'am-active': openModal}"
+    data-test="trn-center-center-modal">
+    <div class="am-modal-content">        
+        <h4 *ngIf="title">{{ title }}</h4>
+        <ng-content></ng-content>
+        <button class="am-close" type="button" (click)="handleModal(false)">Fechar</button>
+    </div>
+    <span class="am-overlay" (click)="handleModal(false)">overflay</span>
+</div>

@@ -1,27 +1,43 @@
-# TesteAngular
+### Pré-requisitos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+Para começar a utilizar o **teste-angular** é pré-requisito ter o `Node.js` instalado (versão 16.14.x ou acima) e o seu gerenciador de pacote favorito na versão mais atual. Caso você ainda não tenha instalado o pacote `@angular/cli`, instale-o via `npm` ou `yarn`.
 
-## Development server
+Instalando com npm:
+```
+npm i -g @angular/cli@^16
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Caso prefira instalar com o yarn:
+```
+yarn global add @angular/cli@^16
+```
 
-## Code scaffolding
+#### Instalar as dependências
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instalando com npm:
+```
+npm install
+```
 
-## Build
+> Caso utilizar a versão 7 do npm pode ocorrer erro de versão das dependências, neste caso utilize `npm install --legacy-peer-deps`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Caso prefira instalar com o yarn:
+```
+yarn install
+```
 
-## Running unit tests
+### execute o seu projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Agora basta executar mais um comando para subir a aplicação e ver o seu projeto rodando no *browser* ;).
 
-## Running end-to-end tests
+```
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Abra o *browser* e acesse a url http://localhost:4200. Pronto!
 
-## Further help
+----
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Pronto?
+
+Agora é só abrir seu **editor / IDE** favorito e começar a trabalhar no seu projeto.

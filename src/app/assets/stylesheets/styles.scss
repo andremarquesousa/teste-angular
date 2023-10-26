@@ -1,0 +1,66 @@
+@import "./general/forms";
+
+* {
+    background: none;
+    font-family: 'arial';
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'arial';
+    height: 100%;
+}
+
+body {
+    print-color-adjust: exact !important;
+    
+    &.am-modal-open {
+        overflow: hidden;
+    }
+}
+
+main,
+section {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+
+    &[disabled] {
+        cursor: default;
+    }
+}
+
+strong {
+    font-weight: 700;
+}
+
+.am-general {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    min-height: 100%;
+    min-width: 1260px;
+    position: relative;
+    overflow: hidden;
+
+    > router-outlet {
+        display: none;
+    }
+}
+
+.am-middle {
+    max-width: 1080px;
+    margin: 0 auto;
+}

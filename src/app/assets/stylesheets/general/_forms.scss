@@ -1,0 +1,105 @@
+form {
+    label {
+        display: block;
+
+        &.am-disabled {
+            pointer-events: none;
+        }
+    }
+
+    h4 {
+        color: #000;
+        font-family: 'arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        margin: 25px 0 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &.am-no-margin {
+            margin: 0;
+        }
+    }
+
+    fieldset {
+        margin: 25px 0 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+input,
+textarea {
+    background: #FFFite;
+    display: block;
+    color: #000;
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid #333;
+    margin: 5px 0 0;
+
+    &::placeholder{
+        color: #333;
+        font-family: 'arial';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &:focus {
+        border-color: #000;
+    }
+
+    &[disabled] {
+        background: #F2F2F2;
+        color: #333;
+        cursor: default;
+        border-color: #F2F2F2;
+    }
+}
+
+input {
+    padding: 0 10px;
+    height: 40px;
+
+    &[type="password"] {
+        font: small-caption;
+        font-size: 16px;
+
+        &::placeholder{
+            font-size: 14px;
+        }
+    }
+
+    &[currencyMask] {
+        pointer-events: none;
+    }
+}
+
+textarea {
+    padding: 10px;
+    height: 110px;
+    outline: none;
+    word-break: break-all;
+}
+
+.am-input-label {
+    display: inline-block;
+    font-family: 'arial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #000;
+}
