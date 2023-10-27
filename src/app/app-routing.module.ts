@@ -6,9 +6,14 @@ const routes: Routes = [
     path: '',
     children: [
         {
-          path: 'home',
+          path: '',
           runGuardsAndResolvers: 'always',
           loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),
+        },
+        {
+          path: 'investimentos',
+          runGuardsAndResolvers: 'always',
+          loadChildren: () => import('./pages/investments/investments.module').then(m => m.InvestmentModule),
         },
     ]
   }

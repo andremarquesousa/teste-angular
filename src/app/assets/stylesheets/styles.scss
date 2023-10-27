@@ -45,15 +45,11 @@ strong {
 }
 
 .am-general {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
+    width: 100%;
     min-height: 100%;
-    min-width: 1260px;
     position: relative;
     overflow: hidden;
+    padding-bottom: 50px;
 
     > router-outlet {
         display: none;
@@ -61,6 +57,12 @@ strong {
 }
 
 .am-middle {
-    max-width: 1080px;
+    max-width: 1024px;
     margin: 0 auto;
+}
+
+main {
+    background-color: #f5f5f5;
+    padding: 30px 0;
+    min-height: calc(100vh - 150px);
 }

@@ -26,7 +26,7 @@ Caso prefira instalar com o yarn:
 yarn install
 ```
 
-### execute o seu projeto
+### Execute o seu projeto
 
 Agora basta executar mais um comando para subir a aplicação e ver o seu projeto rodando no *browser* ;).
 
