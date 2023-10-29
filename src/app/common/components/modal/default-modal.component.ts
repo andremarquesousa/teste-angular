@@ -8,8 +8,8 @@ import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core
 
 export class DefaultModalComponent {
   @ViewChild('amElement', {static: true}) div:any;
-  @Input() title:string;
-  @Input() openModal:boolean;
+  @Input() title:string = '';
+  @Input() openModal:boolean = false;
   @Output() closeModal = new EventEmitter<any>();
   timeOut:any;
 

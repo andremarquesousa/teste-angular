@@ -10,12 +10,24 @@ import { Title } from '@angular/platform-browser';
   }
 })
 export class CdbComponent {
+  resultModal = false;
+  resultData:any;
+
   constructor(
     private titleService: Title,
   ) {
   }
 
-  async ngOnInit() {
+  ngOnInit() {
     this.titleService.setTitle('Investimentos | CDB');
+  }
+
+  receiveResult(event:any) {
+    this.resultModal = true;
+    this.resultData = event;
+  }
+
+  closeModal(event: any) {
+    this.resultModal = event;
   }
 }

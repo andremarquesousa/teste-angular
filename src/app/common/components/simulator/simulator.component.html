@@ -1,0 +1,27 @@
+<form [formGroup]="simulatorForm" (ngSubmit)="handleSimulator()" novalidate>
+    <label>
+        <span class="am-input-label">Meses</span>
+        <ng-select
+            class="am-default-select"
+            [items]="monthsList"
+            bindLabel="name"
+            bindValue="value"
+            [clearable]="false"
+            formControlName="months">
+        </ng-select>
+    </label>
+    <label>
+        <span class="am-input-label">Valor</span>
+        <input
+            type="text"
+            currencyMask
+            formControlName="amount"
+            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', align: 'left'}"
+            maxlength="14"
+            required />
+    </label>
+    <div class="am-actions">
+        <a class="am-default-link" [routerLink]="['/']">Voltar para a home</a>
+        <button class="am-default-button" [disabled]="!simulatorForm.valid" type='submit'>Simular</button>
+    </div>
+</form>

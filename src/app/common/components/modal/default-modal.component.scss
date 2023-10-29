@@ -1,3 +1,5 @@
+@import "../../../assets/stylesheets/general/variables";
+
 ::ng-deep {
     .am-default-modal {
         background: rgba(#000, 0.3);
@@ -28,34 +30,40 @@
         }
 
         .am-modal-content {
-            background: #FFFite;
+            background: #FFF;
             width: 670px;
-            padding: 65px 0;
+            padding: 30px 0;
             box-shadow: 0px 8px 16px rgba(#000, 0.12);
             border-radius: 12px;
             transform: translateY(-100px);
             transition: all 0.4s;
             position: relative;
             z-index: 2;
+            text-align: center;
 
             h4 {
-                color: #000;
-                font-family: 'arial';
+                color: $mainColor;
+                font-family: $mainFont;
                 font-style: normal;
                 font-weight: 700;
-                font-size: $titleMd;
+                font-size: 24px;
                 text-align: center;
-                margin: 30px 0 0;
+                padding: 0 20px;
             }
 
             p {
-                color: #000;
-                font-family: 'arial';
+                color: $textColor;
+                font-family: $mainFont;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
                 text-align: center;
                 margin: 20px 0 0;
+            }
+
+            .am-default-button {
+                display: inline-block;
+                margin-top: 40px
             }
 
             .am-close {
@@ -65,7 +73,7 @@
                 position: absolute;
                 right: 32px;
                 top: 32px;
-                border: solid 2px $greyTones-color-90;
+                border: solid 2px #333333;
                 border-radius: 50%;
                 transition: all 0.4s;
                 backface-visibility: hidden;
@@ -73,7 +81,7 @@
                 &:before,
                 &:after {
                     content: '';
-                    background: $greyTones-color-90;
+                    background: #333333;
                     position: absolute;
                     left: 0;
                     top: 0;

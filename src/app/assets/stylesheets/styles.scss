@@ -1,8 +1,9 @@
+@import "./general/variables";
 @import "./general/forms";
 
 * {
     background: none;
-    font-family: 'arial';
+    font-family: $mainFont;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -15,7 +16,7 @@
 
 html,
 body {
-    font-family: 'arial';
+    font-family: $mainFont;
     height: 100%;
 }
 
@@ -65,4 +66,94 @@ main {
     background-color: #f5f5f5;
     padding: 30px 0;
     min-height: calc(100vh - 150px);
+}
+
+.am-default-link {
+    color: #2278D2;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline;
+    transition: all 0.4s;
+
+    &[disabled] {
+        color: #ABAAAD;
+    }
+
+    &:hover:not([disabled]) {
+        text-decoration: none;
+    }
+
+    &:active:not([disabled]) {
+        opacity: 0.8;
+    }
+}
+
+.am-default-button {
+    background: $mainColor;
+    display: block;
+    color: #FFF;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    min-width: 199px;
+    height: 40px;
+    padding: 0 24px;
+    border-radius: 5px;
+    border: 1px solid $mainColor;
+    transition: background 0.4s, color 0.4s, border 0.4s;
+
+    &[href] {
+        line-height: 40px;
+        text-align: center;
+    }
+
+    &.ib-outlined {
+        background: #FFF;
+        color: $mainColor;
+    }
+
+    &.ib-opposite-bt {
+        background: $opositeColor;
+        color: $mainColor;
+        border-color: $opositeColor;
+
+        &.ib-outlined {
+            background: #FFF;
+            color: $opositeColor;
+            border: solid 1px $opositeColor;
+        }
+
+        &:hover:not([disabled]) {
+            background-color: #FFF;
+            color: rgba($opositeColor, 0.8);
+            border-color: rgba($opositeColor, 0.8);
+        }
+
+        &:active:not([disabled]) {
+            background-color: rgba($opositeColor, 0.4);
+            color: rgba($opositeColor, 0.8);
+            border-color: rgba($opositeColor, 0.6);
+        }
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        background: #8A898E;
+        color: #FFF;
+        border-color: #8A898E;
+    }
+
+    &:hover:not([disabled]) {
+        background-color: #FFF;
+        color: rgba($mainColor, 0.6);
+        border-color: rgba($mainColor, 0.6);
+    }
+
+    &:active:not([disabled]) {
+        background-color: rgba($mainColor, 0.4);
+        color: rgba($mainColor, 0.6);
+        border-color: rgba($mainColor, 0.6);
+    }
 }

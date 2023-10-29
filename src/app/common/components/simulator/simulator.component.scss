@@ -1,0 +1,19 @@
+form {
+    margin-top: 60px;
+    max-width: 400px;
+
+    label {
+        margin: 30px 0 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .am-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+}

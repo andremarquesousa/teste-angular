@@ -1,3 +1,16 @@
 <main>
-    CDB
+    <div class="am-middle">
+        <h2>Simulador CDB</h2>
+
+        <app-simulator (value)="receiveResult($event)"></app-simulator>
+    </div>
 </main>
+
+<app-default-modal [title]="'Resultado'" [openModal]="resultModal" (closeModal)="closeModal($event)">
+    <div *ngIf="resultData">
+        <p><strong>IR</strong>: {{ resultData.tax | currency:'BRL' }}</p>
+        <p><strong>Resultado bruto</strong>: {{ resultData.result - resultData.amount | currency:'BRL' }}</p>
+        <p><strong>Resultado líquido</strong>: {{ (resultData.result - resultData.tax) | currency:'BRL' }}</p>
+    </div>
+    <button class="am-default-button" type="button" (click)="closeModal(false)">OK</button>
+</app-default-modal>
