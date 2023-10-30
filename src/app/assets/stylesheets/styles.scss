@@ -60,12 +60,20 @@ strong {
 .am-middle {
     max-width: 1024px;
     margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        padding: 0 20px;
+    }
 }
 
 main {
     background-color: #f5f5f5;
     padding: 30px 0;
     min-height: calc(100vh - 150px);
+
+    @media (max-width: 720px) {
+        min-height: calc(100vh - 100px);
+    }
 }
 
 .am-default-link {
@@ -86,6 +94,10 @@ main {
 
     &:active:not([disabled]) {
         opacity: 0.8;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
     }
 }
 
@@ -155,5 +167,9 @@ main {
         background-color: rgba($mainColor, 0.4);
         color: rgba($mainColor, 0.6);
         border-color: rgba($mainColor, 0.6);
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 14px;
     }
 }
