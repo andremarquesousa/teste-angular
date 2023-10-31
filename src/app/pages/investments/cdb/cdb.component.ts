@@ -23,6 +23,7 @@ export class CdbComponent {
   }
 
   receiveResult(event:any) {
+    console.log(event);
     this.resultModal = true;
     this.resultData = event;
   }

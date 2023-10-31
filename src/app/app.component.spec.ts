@@ -1,29 +1,34 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FooterComponent } from './common/components/footer/footer.component';
+import { HeaderComponent } from './common/components/header/header.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [RouterTestingModule],
-    declarations: [AppComponent]
+    declarations: [
+      AppComponent,
+      FooterComponent,
+      HeaderComponent
+    ]
   }));
 
-  it('should create the app', () => {
+  it('criando app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'teste-angular'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('criando header', () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('teste-angular');
+    expect(app).toBeTruthy();
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('teste-angular app is running!');
+  it('criando footer', () => {
+    const fixture = TestBed.createComponent(FooterComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
 });

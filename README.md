@@ -26,7 +26,15 @@ Caso prefira instalar com o yarn:
 yarn install
 ```
 
-### Execute o seu projeto
+### Executando testes
+
+Testes utilizando Jasmine e Karma.
+Para executar os Testes:
+```
+ng test
+```
+
+### Execute o  projeto
 
 Agora basta executar mais um comando para subir a aplicação e ver o seu projeto rodando no *browser* ;).
 

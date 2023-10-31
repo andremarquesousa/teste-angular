@@ -8,8 +8,6 @@ import { SimulatorComponent } from './common/components/simulator/simulator.comp
 import { NgxCurrencyDirective } from 'ngx-currency';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { DefaultModalComponent } from './common/components/modal/default-modal.component';
-import ptBr from '@angular/common/locales/pt';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -29,8 +27,8 @@ import ptBr from '@angular/common/locales/pt';
     RouterModule,
     NgxMaskPipe,
     NgSelectModule,
-    SimulatorComponent,
     NgxCurrencyDirective,
+    SimulatorComponent,
     DefaultModalComponent
   ],
   providers: [

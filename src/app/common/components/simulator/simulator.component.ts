@@ -49,7 +49,6 @@ export class SimulatorComponent {
       const tb = (108 / 100) / 100;
       lastValue = lastValue * (1 + (cdi * tb));
     });
-
     
     this.result = lastValue;
     this.value.emit({amount: this.simulatorForm.value.amount, result: this.result, tax: this.tax});
